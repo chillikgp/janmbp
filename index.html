@@ -33,6 +33,7 @@
         }
         .photo-frame {
             transition: transform 0.3s ease-in-out;
+            cursor: pointer;
         }
         .photo-frame:hover {
             transform: scale(1.08) rotate(0deg) !important;
@@ -74,13 +75,12 @@
                 <div class="md:col-span-1 p-3 bg-white rounded-lg shadow-xl photo-frame border-4 border-yellow-300" style="transform: rotate(-2deg);">
                      <h3 class="font-bold text-center mb-3 text-blue-600">Our Special Krishna Outfit</h3>
                     <img src="images/1.jpg" alt="Krishna dress for baby" class="rounded-md w-full h-auto object-cover">
-                    <!-- INSTRUCTION: Image path is updated. Ensure your "images" folder is in the same directory as this HTML file. -->
                 </div>
                 
                 <!-- Setup Photos (Right Columns) -->
                 <div class="md:col-span-2">
                     <h3 class="text-2xl font-bold text-center mb-4 text-blue-600">Our Special Krishna Themes</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                         <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(3deg);"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
                         <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-4deg);"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
                         <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(2deg);"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
@@ -109,7 +109,7 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 Minutes Session</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Baby Only</li>
                     </ul>
-                    <button class="mt-6 w-full bg-yellow-400 text-yellow-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors">Select Package</button>
+                    <a href="https://wa.me/917042926912?text=BalGopalMini" target="_blank" class="block mt-6 w-full bg-yellow-400 text-yellow-900 font-bold py-2 px-4 rounded-lg hover:bg-yellow-500 transition-colors">Select Package</a>
                 </div>
 
                 <!-- Package 2: Nandlala Classic (Most Popular) -->
@@ -126,7 +126,7 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>45 Minutes Session</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Baby + Parents</li>
                     </ul>
-                    <button class="mt-6 w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Select Package</button>
+                    <a href="https://wa.me/917042926912?text=NandlalaClassic" target="_blank" class="block mt-6 w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors">Select Package</a>
                 </div>
 
                 <!-- Package 3: Vrindavan Grand -->
@@ -141,7 +141,7 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Baby + Parents + Siblings</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Free Instagram Reel</strong></li>
                     </ul>
-                    <button class="mt-6 w-full bg-pink-400 text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-500 transition-colors">Select Package</button>
+                    <a href="https://wa.me/917042926912?text=VrindavanGrand" target="_blank" class="block mt-6 w-full bg-pink-400 text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-500 transition-colors">Select Package</a>
                 </div>
             </div>
         </section>
@@ -150,16 +150,17 @@
         <section class="mb-16">
              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- At Home Package -->
-                <div class="card rounded-2xl shadow-lg p-6 border-t-4 border-teal-400">
+                <div class="card rounded-2xl shadow-lg p-6 border-t-4 border-teal-400 flex flex-col">
                     <h3 class="text-2xl font-bold text-center text-teal-600">Vrindavan @ Your Home</h3>
                     <p class="text-gray-500 text-sm mb-4 text-center">Ultimate comfort & convenience</p>
                     <p class="text-4xl font-bold my-4 text-center">₹9,999</p>
-                     <ul class="text-left space-y-2 mt-4">
+                     <ul class="text-left space-y-2 mt-4 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full family included (parents, siblings, grandparents)</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 Edited Digital Photos</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Approx. 90-minute session</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Travel within Delhi NCR</li>
                     </ul>
+                    <a href="https://wa.me/917042926912?text=VrindavanHome" target="_blank" class="block mt-6 w-full bg-teal-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-teal-600 transition-colors">Select Package</a>
                 </div>
                 <!-- Add-ons -->
                 <div class="card rounded-2xl shadow-lg p-6 border-t-4 border-gray-400">
@@ -210,6 +211,12 @@
         </footer>
 
     </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-[100] hidden flex justify-center items-center p-4">
+        <span id="closeModal" class="absolute top-5 right-5 text-white text-5xl font-bold cursor-pointer hover:text-gray-300">&times;</span>
+        <img id="modalImage" src="" alt="Expanded Theme" class="max-w-[95vw] max-h-[95vh] rounded-lg">
+    </div>
     
     <script>
         // Script to hide the "See Packages" button on scroll
@@ -219,6 +226,32 @@
                 seePackagesBtn.classList.add('opacity-0', 'pointer-events-none');
             } else {
                 seePackagesBtn.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        });
+
+        // Image Modal Script
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModalBtn = document.getElementById('closeModal');
+        const themeFrames = document.querySelectorAll('.photo-frame');
+
+        themeFrames.forEach(frame => {
+            frame.addEventListener('click', () => {
+                const imgSrc = frame.querySelector('img').src;
+                modalImg.src = imgSrc;
+                modal.classList.remove('hidden');
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        // Also close modal if user clicks on the background
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
             }
         });
     </script>
