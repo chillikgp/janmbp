@@ -85,42 +85,39 @@
         <!-- Gallery Section -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Our Magical Themes</h2>
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <!-- Setup Photos (Left Columns) -->
-                <div class="w-full md:w-2/3">
-                    <h3 class="text-2xl font-bold text-center mb-4 text-blue-600">Our Special Krishna Themes</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(3deg);"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-4deg);"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(2deg);"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(4deg);"><img src="images/5.jpg" alt="Janmashtami setup 4" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(-3deg);"><img src="images/6.jpg" alt="Janmashtami setup 5" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(2deg);"><img src="images/7.jpg" alt="Jhula setup" class="rounded-md w-full h-full object-cover"></div>
-                    </div>
-                </div>
-                <!-- Review Carousel (Right Column) -->
-                <div class="w-full md:w-1/3 p-4 bg-white rounded-lg shadow-xl border-4 border-yellow-300 h-auto md:h-[400px] flex flex-col">
-                    <h3 class="font-bold text-center mb-3 text-blue-600">What Our Clients Say</h3>
-                    <div id="reviewCarousel" class="relative flex-grow overflow-hidden rounded-lg">
-                        <div id="reviewSlider" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
-                            <!-- Review 1 -->
-                            <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
-                                <p class="text-gray-600 italic">"If you want art, emotion, and pure magic captured forever... Highly recommended for all parents!"</p>
-                                <p class="font-bold mt-3 text-gray-800">- Supriya Malik</p>
-                                <div class="text-yellow-400 mt-1">★★★★★</div>
-                            </div>
-                            <!-- Review 2 -->
-                            <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
-                                <p class="text-gray-600 italic">"Incredible job capturing the essence of Janmashtami... The photos are a treasure to cherish. Highly recommend!"</p>
-                                <p class="font-bold mt-3 text-gray-800">- Raman Deep</p>
-                                <div class="text-yellow-400 mt-1">★★★★★</div>
-                            </div>
-                            <!-- Review 3 -->
-                            <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
-                                <p class="text-gray-600 italic">"We had our daughter's Janmashtami shoot and really enjoyed it. They have beautiful costumes for both Radha and Krishna."</p>
-                                <p class="font-bold mt-3 text-gray-800">- Sankalp Sharma</p>
-                                <div class="text-yellow-400 mt-1">★★★★★</div>
-                            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(3deg);"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-4deg);"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(2deg);"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(4deg);"><img src="images/5.jpg" alt="Janmashtami setup 4" class="rounded-md w-full h-full object-cover"></div>
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(-3deg);"><img src="images/6.jpg" alt="Janmashtami setup 5" class="rounded-md w-full h-full object-cover"></div>
+                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(2deg);"><img src="images/7.jpg" alt="Jhula setup" class="rounded-md w-full h-full object-cover"></div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section class="mb-16">
+            <div class="max-w-md mx-auto p-4 bg-white rounded-lg shadow-xl border-4 border-yellow-300">
+                <h3 class="font-bold text-center mb-3 text-blue-600 text-2xl">What Our Clients Say</h3>
+                <div id="reviewCarousel" class="relative overflow-hidden rounded-lg h-48">
+                    <div id="reviewSlider" class="absolute inset-0 flex transition-transform duration-700 ease-in-out">
+                        <!-- Review 1 -->
+                        <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
+                            <p class="text-gray-600 italic">"If you want art, emotion, and pure magic captured forever... Highly recommended for all parents!"</p>
+                            <p class="font-bold mt-3 text-gray-800">- Supriya Malik</p>
+                            <div class="text-yellow-400 mt-1">★★★★★</div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
+                            <p class="text-gray-600 italic">"Incredible job capturing the essence of Janmashtami... The photos are a treasure to cherish. Highly recommend!"</p>
+                            <p class="font-bold mt-3 text-gray-800">- Raman Deep</p>
+                            <div class="text-yellow-400 mt-1">★★★★★</div>
+                        </div>
+                        <!-- Review 3 -->
+                        <div class="w-full flex-shrink-0 p-4 flex flex-col justify-center items-center text-center">
+                            <p class="text-gray-600 italic">"We had our daughter's Janmashtami shoot and really enjoyed it. They have beautiful costumes for both Radha and Krishna."</p>
+                            <p class="font-bold mt-3 text-gray-800">- Sankalp Sharma</p>
+                            <div class="text-yellow-400 mt-1">★★★★★</div>
                         </div>
                     </div>
                 </div>
@@ -293,3 +290,20 @@
 
 </body>
 </html>
+```
+
+I have selected the whole document in the most up-to-date Canvas "Janmashtami Photoshoot Pricing Page (Updated)" document above and am asking a query about/based on this code below.
+Instructions to follow:
+  * Don't output/edit the document if the query is Direct/Simple. For example, if the query asks for a simple explanation, output a direct answer.
+  * Make sure to **edit** the document if the query shows the intent of editing the document, in which case output the entire edited document, **not just that section or the edits**.
+    * Don't output the same document/empty document and say that you have edited it.
+    * Don't change unrelated code in the document.
+  * Don't output  and  in your final response.
+  * Any references like "this" or "selected code" refers to the code between  and  tags.
+  * Just acknowledge my request in the introduction.
+  * Make sure to refer to the document as "Canvas" in your response.
+
+not looking good. remove this heading - Our Special Krishna Themes
+
+
+also bring the "What Our Clients Say" as a separate section below the the
