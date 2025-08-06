@@ -31,6 +31,13 @@
         .popular-badge {
             transform: rotate(15deg);
         }
+        .photo-frame {
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-frame:hover {
+            transform: scale(1.08) rotate(0deg) !important;
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -49,7 +56,7 @@
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Our Magical Setups & Wardrobe</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 <!-- Dress Photo (Left Column) -->
-                <div class="md:col-span-1 p-3 bg-white rounded-lg shadow-xl">
+                <div class="md:col-span-1 p-3 bg-white rounded-lg shadow-xl photo-frame border-4 border-yellow-300" style="transform: rotate(-2deg);">
                      <h3 class="font-bold text-center mb-3 text-blue-600">Our Special Krishna Outfit</h3>
                     <img src="images/1.jpg" alt="Krishna dress for baby" class="rounded-md w-full h-auto object-cover">
                     <!-- INSTRUCTION: Image path is updated. Ensure your "images" folder is in the same directory as this HTML file. -->
@@ -58,14 +65,13 @@
                 <!-- Setup Photos (Right Columns) -->
                 <div class="md:col-span-2">
                     <h3 class="text-2xl font-bold text-center mb-4 text-blue-600">Our Special Krishna Themes</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/5.jpg" alt="Janmashtami setup 4" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/6.jpg" alt="Janmashtami setup 5" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl"><img src="images/7.jpg" alt="Jhula setup" class="rounded-md w-full h-full object-cover"></div>
-                        <div class="p-2 bg-white rounded-lg shadow-xl sm:col-span-3"><img src="images/8.jpg" alt="Jhula setup wide" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(3deg);"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-4deg);"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(2deg);"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(4deg);"><img src="images/5.jpg" alt="Janmashtami setup 4" class="rounded-md w-full h-full object-cover"></div>
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(-3deg);"><img src="images/6.jpg" alt="Janmashtami setup 5" class="rounded-md w-full h-full object-cover"></div>
+                        <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(2deg);"><img src="images/7.jpg" alt="Jhula setup" class="rounded-md w-full h-full object-cover"></div>
                     </div>
                 </div>
             </div>
