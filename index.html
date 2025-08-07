@@ -358,6 +358,32 @@
             }
         });
     </script>
+    <script>
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('#tab-content > div');
+        
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.getAttribute('data-tab');
+        
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+        
+                    // Add active class to clicked button
+                    button.classList.add('active');
+        
+                    // Show only the selected content
+                    tabContents.forEach(content => {
+                        if (content.getAttribute('data-content') === selectedTab || selectedTab === 'all') {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        </script>
+
 
 </body>
 </html>
