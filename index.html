@@ -12,13 +12,13 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-LW6GNLQ3KH');
     </script>
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Janmashtami Photoshoot">
-    <meta property="og:description" content="My Baby Pictures, Delhi | Apne chhotey Krishna ki pyaari yaadein capture karein, starting at just ₹1599!">
+    <meta property="og:description" content="My Baby Pictures, Delhi | Apne chhotey Krishna ki pyaari yaadein capture karein, starting at just ₹1499!">
     <meta property="og:image" content="https://krishna.mybabypictures.in/images/url-image.jpg">
     <meta property="og:url" content="https://krishna.mybabypictures.in/">
     <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Janmashtami Photoshoot">
-    <meta name="twitter:description" content="My Baby Pictures, Delhi | Apne chhotey Krishna ki pyaari yaadein capture karein, starting at just ₹1599!">
+    <meta name="twitter:description" content="My Baby Pictures, Delhi | Apne chhotey Krishna ki pyaari yaadein capture karein, starting at just ₹1499!">
     <meta name="twitter:image" content="https://krishna.mybabypictures.in/images/url-image.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -59,6 +59,7 @@
         .photo-frame {
             transition: transform 0.3s ease-in-out;
             cursor: pointer;
+            position: relative;
         }
         .photo-frame:hover {
             transform: scale(1.08) rotate(0deg) !important;
@@ -67,6 +68,19 @@
         /* For smooth hiding of the button */
         #seePackagesBtn {
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Tab styles */
+        .tab-btn.active {
+            background-color: #3B82F6; /* blue-500 */
+            color: white;
+        }
+        /* Hide scrollbar for tabs on mobile */
+        .mobile-scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .mobile-scroll-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
         }
     </style>
 </head>
@@ -89,19 +103,52 @@
             <h1 class="font-satisfy text-5xl md:text-7xl text-blue-600">Janmashtami Photoshoot</h1>
             <p class="text-lg text-gray-600">by <a href="https://maps.app.goo.gl/bHYmc56djLu23aPH7" target="_blank" class="text-blue-600 hover:underline">My Baby Pictures, Delhi</a></p>
             <p class="text-2xl md:text-4xl font-bold mt-4 text-gray-700">नन्हे कान्हा की नटखट मुस्कान को हमेशा के लिए सहेजें!</p>
-            <p class="mt-4 text-lg text-gray-700 font-semibold max-w-3xl mx-auto">Get a Kanha moment starting at just ₹1599!</p>
+            <p class="mt-4 text-lg text-gray-700 font-semibold max-w-3xl mx-auto">Get a Kanha moment starting at just ₹1499!</p>
         </header>
 
         <!-- Gallery Section -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">Our Magical Themes</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(3deg);"><img src="images/2.jpg" alt="Janmashtami setup 1" class="rounded-md w-full h-full object-cover"></div>
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-4deg);"><img src="images/3.jpg" alt="Janmashtami setup 2" class="rounded-md w-full h-full object-cover"></div>
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(2deg);"><img src="images/4.jpg" alt="Janmashtami setup 3" class="rounded-md w-full h-full object-cover"></div>
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(4deg);"><img src="images/5.jpg" alt="Janmashtami setup 4" class="rounded-md w-full h-full object-cover"></div>
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(-3deg);"><img src="images/6.jpg" alt="Janmashtami setup 5" class="rounded-md w-full h-full object-cover"></div>
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(2deg);"><img src="images/7.jpg" alt="Jhula setup" class="rounded-md w-full h-full object-cover"></div>
+            
+            <!-- Tabs -->
+            <div class="mb-6 overflow-x-auto mobile-scroll-hide">
+                <div id="tabs" class="flex space-x-2 md:space-x-4 border-b-2 border-gray-200 pb-2 justify-center">
+                    <button data-tab="all" class="tab-btn active px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">All Themes</button>
+                    <button data-tab="darbar" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Darbar</button>
+                    <button data-tab="aangan" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Aangan</button>
+                    <button data-tab="gokul" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Gokul</button>
+                    <button data-tab="jhula" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Jhula</button>
+                    <button data-tab="kutiya" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Kutiya</button>
+                    <button data-tab="vrindavan" class="tab-btn px-4 py-2 rounded-t-lg font-semibold text-gray-600 whitespace-nowrap">Vrindavan</button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="tab-content">
+                <!-- All Themes Panel -->
+                <div data-content="all" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Sample Images -->
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar1.jpeg" alt="Darbar Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar2.jpeg" alt="Darbar Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan1.jpeg" alt="Aangan Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(-2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan2.jpeg" alt="Aangan Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul1.jpeg" alt="Gokul Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(-1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul2.jpeg" alt="Gokul Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-yellow-400" style="transform: rotate(2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhulla1.jpeg" alt="Jhula Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-red-400" style="transform: rotate(-3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhula2.jpeg" alt="Jhula Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-indigo-400" style="transform: rotate(1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya1.jpeg" alt="Kutiya Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-lime-400" style="transform: rotate(-2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya2.jpeg" alt="Kutiya Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-cyan-400" style="transform: rotate(3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vrindavan1.jpeg" alt="Vrindavan Theme" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-fuchsia-400" style="transform: rotate(-1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vrindavan2.jpeg" alt="Vrindavan Theme" class="rounded-md w-full h-full object-cover"></div>
+                </div>
+
+                <!-- Individual Theme Panels -->
+                <div data-content="darbar" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+                <div data-content="aangan" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+                <div data-content="gokul" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+                <div data-content="jhula" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+                <div data-content="kutiya" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+                <div data-content="vrindavan" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
             </div>
         </section>
 
@@ -115,7 +162,7 @@
                 <div class="card rounded-2xl shadow-lg p-6 text-center flex flex-col border-t-4 border-yellow-400 transition-transform duration-300 hover:scale-105">
                     <h3 class="text-2xl font-bold text-gray-800">Bal Gopal Mini</h3>
                     <p class="text-gray-500 text-sm mb-4">Quick, solo portraits on a budget</p>
-                    <p class="text-5xl font-bold my-4">₹1599</p>
+                    <p class="text-5xl font-bold my-4">₹1499</p>
                     <ul class="text-left space-y-3 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Theme Setup (Dress Complimentary)</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Edited Digital Photos</li>
@@ -132,7 +179,7 @@
                     </div>
                     <h3 class="text-2xl font-bold text-blue-600">Nandlala Classic</h3>
                     <p class="text-gray-500 text-sm mb-4">Variety & family photos</p>
-                    <p class="text-5xl font-bold my-4">₹2,599</p>
+                    <p class="text-5xl font-bold my-4">₹3,499</p>
                     <ul class="text-left space-y-3 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 Themes incl. Jhula (Dress Complimentary)</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10 Edited Digital Photos</li>
@@ -151,8 +198,8 @@
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Up to 4 Themes incl. Jhula (Dress Complimentary)</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20+ Edited Digital Photos</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>60 Minutes Session</li>
-                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Baby + Include Family</li>
-                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Free Instagram Reel </strong> (<a href="https://www.youtube.com/shorts/7e9hw4R0-y8" target="_blank" class="text-blue-600 hover:underline">See Sample</a>)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Baby + Parents + Siblings</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Free Instagram Reel</strong> (<a href="https://www.youtube.com/shorts/7e9hw4R0-y8" target="_blank" class="text-blue-600 hover:underline">See Sample</a>)</li>
                     </ul>
                     <a href="https://wa.me/917042926912?text=VrindavanGrand" target="_blank" class="block mt-6 w-full bg-pink-400 text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-500 transition-colors">Select Package</a>
                 </div>
@@ -166,7 +213,7 @@
                 <div class="card rounded-2xl shadow-lg p-6 border-t-4 border-teal-400 flex flex-col">
                     <h3 class="text-2xl font-bold text-center text-teal-600">Vrindavan @ Your Home</h3>
                     <p class="text-gray-500 text-sm mb-4 text-center">Travel within Delhi NCR</p>
-                    <p class="text-4xl font-bold my-4 text-center">₹4,599</p>
+                    <p class="text-4xl font-bold my-4 text-center">₹4,499</p>
                      <ul class="text-left space-y-2 mt-4 flex-grow">
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Theme Setup (Dress Complimentary)</li>
                         <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full family included</li>
@@ -181,20 +228,12 @@
                     <p class="text-gray-500 text-sm mb-4 text-center">Customize your package</p>
                     <div class="divide-y divide-gray-200 mt-4">
                         <div class="flex justify-between items-center py-3">
-                            <span>Include Family </span>
-                            <span class="font-bold">₹700</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3">
                             <span>Instagram Reel (<a href="https://www.youtube.com/shorts/7e9hw4R0-y8" target="_blank" class="text-blue-600 hover:underline">See Sample</a>)</span>
                             <span class="font-bold">₹1,000</span>
                         </div>
                         <div class="flex justify-between items-center py-3">
                             <span>5 Photo Hard Copies</span>
                             <span class="font-bold">₹500</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3">
-                            <span>1 Photo Frame 12x18</span>
-                            <span class="font-bold">₹800</span>
                         </div>
                         <div class="flex justify-between items-center py-3 text-green-700">
                             <span class="font-semibold">2nd Kid (Sibling)</span>
