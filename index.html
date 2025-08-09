@@ -59,7 +59,7 @@
             position: relative;
         }
         .photo-frame:hover {
-            transform: scale(1.08) rotate(0deg) !important;
+            transform: scale(1.08);
             z-index: 10;
         }
         /* For smooth hiding of the button */
@@ -117,18 +117,18 @@
 
             <div id="tab-content">
                 <div data-content="all" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-pink-400" style="transform: rotate(2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar1.jpeg" alt="Baby girl in Radha dress for Janmashtami photoshoot in Delhi" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-teal-400" style="transform: rotate(-3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar2.jpeg" alt="Baby boy in Krishna costume for a photoshoot in our Darbar theme" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-blue-400" style="transform: rotate(1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan1.jpeg" alt="Cute baby girl dressed as Radha for a Janmashtami photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-orange-400" style="transform: rotate(-2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan2.jpeg" alt="Mother and baby in Krishna dress for a family photoshoot in Delhi" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-purple-400" style="transform: rotate(3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul1.jpeg" alt="Baby girl in Krishna dress as part of our Gokul theme photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-green-400" style="transform: rotate(-1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul2.jpeg" alt="Mother and son dressed as Yashoda and Krishna for a baby photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-yellow-400" style="transform: rotate(2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhulla1.jpeg" alt="Happy baby girl on a swing (jhula) for a Janmashtami photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-red-400" style="transform: rotate(-3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhulla2.jpeg" alt="Smiling baby boy dressed as little Krishna on a jhula" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-indigo-400" style="transform: rotate(1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya1.jpeg" alt="Baby boy in Krishna costume in a rustic hut (kutiya) theme photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-lime-400" style="transform: rotate(-2deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya2.jpeg" alt="Cute baby boy in Krishna dress for a Kutiya theme baby photoshoot" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-cyan-400" style="transform: rotate(3deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vridanvan1.jpeg" alt="Professional baby photoshoot in Delhi with a Vrindavan theme" class="rounded-md w-full h-full object-cover"></div>
-                    <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 border-fuchsia-400" style="transform: rotate(-1deg);"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vridanvan2.jpeg" alt="Baby girl dressed as Radha with a pot of butter in a Vrindavan photoshoot" class="rounded-md w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar1.jpeg" alt="Baby girl in Radha dress for Janmashtami photoshoot in Delhi" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar2.jpeg" alt="Baby boy in Krishna costume for a photoshoot in our Darbar theme" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan1.jpeg" alt="Cute baby girl dressed as Radha for a Janmashtami photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Aangan Theme</div><img src="images/aangan2.jpeg" alt="Mother and baby in Krishna dress for a family photoshoot in Delhi" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul1.jpeg" alt="Baby girl in Krishna dress as part of our Gokul theme photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Gokul Theme</div><img src="images/gokul2.jpeg" alt="Mother and son dressed as Yashoda and Krishna for a baby photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhulla1.jpeg" alt="Happy baby girl on a swing (jhula) for a Janmashtami photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Jhula Theme</div><img src="images/jhulla2.jpeg" alt="Smiling baby boy dressed as little Krishna on a jhula" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya1.jpeg" alt="Baby boy in Krishna costume in a rustic hut (kutiya) theme photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Kutiya Theme</div><img src="images/kutiya2.jpeg" alt="Cute baby boy in Krishna dress for a Kutiya theme baby photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vridanvan1.jpeg" alt="Professional baby photoshoot in Delhi with a Vrindavan theme" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
+                    <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vridanvan2.jpeg" alt="Baby girl dressed as Radha with a pot of butter in a Vrindavan photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
                 </div>
 
                 <div data-content="darbar" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
@@ -391,7 +391,7 @@
             'kutiya3.jpeg': 'A waving baby boy dressed as Krishna in a straw hut studio setup.',
             'kutiya4.jpeg': 'Little girl dressed as Radha for a Janmashtami photoshoot in a Kutiya theme.',
             'vridanvan1.jpeg': 'Baby girl in Radha dress for a colorful Vrindavan theme photoshoot.',
-            'vridanvan2.jpeg': 'A happy baby girl as Radha with a butter pot in a Vrindavan setting.',
+            'vridanvan2.jpeg':.jpeg': 'A happy baby girl as Radha with a butter pot in a Vrindavan setting.',
             'vridanvan3.jpeg': 'Baby photoshoot for Janmashtami with a cute girl in Radha costume.',
             'vridanvan4.jpeg': 'A baby in a green Radha dress holds a butter pot in a Vrindavan theme.',
             'vridanvan5.jpeg': 'Baby photoshoot with a beautiful Vrindavan background and marigold flowers.',
@@ -400,18 +400,10 @@
     
         // MODIFIED: This function now accepts alt text
         function createImageCard(src, theme, index, altText) {
-            const borderColors = [
-                'border-pink-400', 'border-teal-400', 'border-blue-400',
-                'border-orange-400', 'border-purple-400', 'border-green-400',
-                'border-yellow-400', 'border-red-400', 'border-indigo-400',
-                'border-lime-400', 'border-cyan-400', 'border-fuchsia-400'
-            ];
-            const rotateDegs = ['rotate(2deg)', 'rotate(-3deg)', 'rotate(1deg)', 'rotate(-2deg)', 'rotate(3deg)', 'rotate(-1deg)'];
-    
             return `
-                <div class="p-2 bg-white rounded-lg shadow-xl photo-frame border-4 ${borderColors[index % borderColors.length]}" style="transform: ${rotateDegs[index % rotateDegs.length]}">
+                <div class="relative photo-frame">
                     <div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">${theme.charAt(0).toUpperCase() + theme.slice(1)} Theme</div>
-                    <img src="images/${src}" alt="${altText}" class="rounded-md w-full h-full object-cover">
+                    <img src="images/${src}" alt="${altText}" class="rounded-lg shadow-xl w-full h-full object-cover">
                 </div>
             `;
         }
