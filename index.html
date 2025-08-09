@@ -37,29 +37,20 @@
         .font-satisfy {
             font-family: 'Satisfy', cursive;
         }
-        /* Add a subtle pattern to the background
-        body {
-            background-color: #FEFDE8; Creamy yellow base
-            background-image:
-                radial-gradient(circle at 60% 5%, #A5D8FF 0%, transparent 30%),
-                radial-gradient(circle at 90% 80%, #FFD700 0%, transparent 25%),
-                radial-gradient(circle at 20% 90%, #A5D8FF 0%, transparent 20%);
-        }*/
-
         body::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('images/hello-dddoodle-3.svg');
-        background-repeat: repeat;
-        background-size: 800px 800px;
-        background-position: center;
-        opacity: 0.1; /* 10% opacity */
-        z-index: -1;
-        pointer-events: none;
-      }
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/hello-dddoodle-3.svg');
+            background-repeat: repeat;
+            background-size: 800px 800px;
+            background-position: center;
+            opacity: 0.1; /* 10% opacity */
+            z-index: -1;
+            pointer-events: none;
+        }
         .card {
             background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
@@ -77,16 +68,14 @@
             transform: scale(1.08);
             z-index: 10;
         }
-        /* For smooth hiding of the button */
         #seePackagesBtn {
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-        /* Tab styles */
         .tab-btn.active {
             background-color: #3B82F6; /* blue-500 */
             color: white;
+            border-bottom-color: transparent;
         }
-        /* Hide scrollbar for tabs on mobile */
         .mobile-scroll-hide::-webkit-scrollbar {
             display: none;
         }
@@ -98,10 +87,12 @@
 </head>
 <body class="text-gray-800">
 
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919555926912?text=Janmashtami%20Photoshoot" onclick="gtag('event', 'whatsapp_click', { 'event_category': 'whatsapp', 'event_label': 'Floating WhatsApp Button' });" target="_blank" class="fixed top-5 right-5 z-50 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-transform hover:scale-110">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.06 22L7.31 20.62C8.75 21.41 10.36 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.91C21.95 9.27 20.92 6.83 19.11 4.99C17.3 3.17 14.86 2 12.04 2M12.04 3.67C16.56 3.67 20.28 7.38 20.28 11.91C20.28 16.44 16.56 20.15 12.04 20.15C10.48 20.15 8.99 19.74 7.74 19L7.21 18.69L4.35 19.51L5.19 16.74L4.86 16.2C3.93 14.83 3.46 13.2 3.46 11.91C3.46 7.38 7.17 3.67 12.04 3.67M9.1 7.49C8.91 7.49 8.72 7.55 8.57 7.8C8.41 8.05 7.81 8.66 7.81 9.71C7.81 10.76 8.59 11.75 8.72 11.91C8.84 12.07 10.16 14.16 12.21 14.97C13.89 15.65 14.33 15.46 14.69 15.41C15.2 15.33 16.04 14.85 16.22 14.2C16.39 13.55 16.39 13.01 16.31 12.9C16.22 12.78 16.06 12.72 15.83 12.6C15.6 12.48 14.48 11.93 14.26 11.85C14.03 11.77 13.87 11.71 13.72 11.96C13.56 12.21 13.11 12.78 12.95 12.96C12.78 13.14 12.62 13.16 12.39 13.04C12.16 12.92 11.23 12.61 10.11 11.63C9.21 10.84 8.59 9.89 8.44 9.64C8.28 9.39 8.41 9.25 8.53 9.13C8.63 9.03 8.76 8.87 8.88 8.74C9 8.61 9.06 8.49 9.18 8.28C9.3 8.07 9.24 7.91 9.18 7.8C9.1 7.68 9.1 7.49 9.1 7.49Z"></path></svg>
     </a>
     
+    <!-- See Packages Button -->
     <a href="#pricing" id="seePackagesBtn" onclick="gtag('event', 'navigation_click', { 'event_category': 'navigation', 'event_label': 'See Packages' });" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 bg-blue-500 text-white py-3 px-6 rounded-full shadow-lg hover:bg-blue-600">
         See Packages
     </a>
@@ -131,6 +122,7 @@
             </div>
 
             <div id="tab-content">
+                <!-- "All" tab content is pre-loaded -->
                 <div data-content="all" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                     <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar1.jpeg" alt="Baby girl in Radha dress for Janmashtami photoshoot in Delhi" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
                     <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Darbar Theme</div><img src="images/darbar2.jpeg" alt="Baby boy in Krishna costume for a photoshoot in our Darbar theme" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
@@ -146,6 +138,7 @@
                     <div class="relative photo-frame"><div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">Vrindavan Theme</div><img src="images/vridanvan2.jpeg" alt="Baby girl dressed as Radha with a pot of butter in a Vrindavan photoshoot" class="rounded-lg shadow-xl w-full h-full object-cover"></div>
                 </div>
 
+                <!-- Other theme containers are empty and hidden by default, will be populated by JS -->
                 <div data-content="darbar" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
                 <div data-content="aangan" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
                 <div data-content="gokul" class="hidden grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"></div>
@@ -155,6 +148,7 @@
             </div>
         </section>
 
+        <!-- Pricing Section -->
         <section id="pricing" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-700">Choose Your Perfect Package</h2>
             <p class="text-center text-gray-600 mb-8">The Krishna dress will be provided by us complimentary. You are welcome to bring any other accessories you may like.</p>
@@ -205,6 +199,7 @@
             </div>
         </section>
 
+        <!-- Home Package and Add-Ons Section -->
         <section class="mb-16">
              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="card rounded-2xl shadow-lg p-6 border-t-4 border-teal-400 flex flex-col">
@@ -248,6 +243,7 @@
             </div>
         </section>
 
+        <!-- Testimonials Section -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-gray-700">What Our Clients Say</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -269,6 +265,7 @@
             </div>
         </section>
 
+        <!-- Footer Section -->
         <footer class="text-center bg-white/50 rounded-2xl p-8 shadow-inner">
             <div class="flex flex-col md:flex-row items-center justify-center gap-8">
                 <div class="w-full md:w-1/3 flex-shrink-0 hidden md:block">
@@ -308,172 +305,131 @@
 
     </div>
 
+    <!-- Image Modal -->
     <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 z-[100] hidden flex justify-center items-center p-4">
         <span id="closeModal" class="absolute top-5 right-5 text-white text-5xl font-bold cursor-pointer hover:text-gray-300">×</span>
         <img id="modalImage" src="" alt="Expanded Theme Image for Janmashtami Baby Photoshoot" class="max-w-[95vw] max-h-[95vh] rounded-lg">
     </div>
     
     <script>
-        // Script to hide the "See Packages" button on scroll
-        const seePackagesBtn = document.getElementById('seePackagesBtn');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 400) { // Hide after scrolling 400px
-                seePackagesBtn.classList.add('opacity-0', 'pointer-events-none');
-            } else {
-                seePackagesBtn.classList.remove('opacity-0', 'pointer-events-none');
-            }
-        });
+        // --- SCRIPT FOR BUTTON HIDING AND IMAGE MODAL ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const seePackagesBtn = document.getElementById('seePackagesBtn');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    seePackagesBtn.classList.add('opacity-0', 'pointer-events-none');
+                } else {
+                    seePackagesBtn.classList.remove('opacity-0', 'pointer-events-none');
+                }
+            });
 
-        // Image Modal Script
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeModalBtn = document.getElementById('closeModal');
-        const themeFrames = document.querySelectorAll('.photo-frame');
-
-        themeFrames.forEach(frame => {
-            frame.addEventListener('click', () => {
-                const img = frame.querySelector('img');
-                modalImg.src = img.src;
-                modalImg.alt = img.alt; // Set modal alt text from the clicked image
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeModalBtn = document.getElementById('closeModal');
+            
+            function openModal(imgElement) {
+                modalImg.src = imgElement.src;
+                modalImg.alt = imgElement.alt;
                 modal.classList.remove('hidden');
                 gtag('event', 'image_view', {
                     'event_category': 'gallery',
-                    'event_label': img.alt
+                    'event_label': imgElement.alt
                 });
-            });
-        });
-
-        const closeModal = () => {
-            modal.classList.add('hidden');
-        }
-
-        closeModalBtn.addEventListener('click', closeModal);
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
             }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+            }
+
+            document.getElementById('tab-content').addEventListener('click', function(e) {
+                if (e.target && e.target.closest('.photo-frame')) {
+                    const img = e.target.closest('.photo-frame').querySelector('img');
+                    if(img) openModal(img);
+                }
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
         });
     </script>
     <script>
-        // --- START: MODIFIED SCRIPT FOR DYNAMIC ALT TEXT ---
-        const tabButtons = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('#tab-content > div');
-    
-        const themeImageCounts = {
-            darbar: 5, aangan: 5, gokul: 13,
-            jhula: 7, kutiya: 4, vrindavan: 6
-        };
-    
-        const themeToFilePrefix = {
-            darbar: 'darbar', aangan: 'aangan', gokul: 'gokul',
-            jhula: 'jhulla', kutiya: 'kutiya', vrindavan: 'vridanvan'
-        };
+        // --- START: CORRECTED SCRIPT FOR TABS ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('#tab-content > div');
 
-        // NEW: Alt text mapping object from your CSV file
-        const altTextMappings = {
-            'aangan1.jpeg': 'Baby girl in Radha dress with butter pot for Aangan theme photoshoot in Delhi.',
-            'aangan2.jpeg': 'Yashoda ma playing with baby Krishna during a family photoshoot.',
-            'aangan3.jpeg': 'Smiling baby girl dressed as Radha for Janmashtami Aangan theme photoshoot.',
-            'aangan4.jpeg': 'An adorable baby Krishna leaning on Yashoda ma in a tender moment.',
-            'aangan5.jpeg': 'Yashoda ma looking lovingly at baby Krishna for a themed photoshoot.',
-            'darbar1.jpeg': 'Happy baby girl in a colorful Radha dress for a Darbar theme photoshoot.',
-            'darbar2.jpeg': 'Cute baby boy dressed as little Krishna sitting on a small throne.',
-            'darbar3.jpeg': 'Baby boy as Krishna with a playful expression and butter on his face.',
-            'darbar4.jpeg': 'Innocent baby boy in Krishna costume for Janmashtami photoshoot.',
-            'darbar5.jpeg': 'Little girl smiling brightly in a Radha costume for a studio photoshoot.',
-            'gokul1.jpeg': 'Baby girl in Radha dress sitting in a Gokul theme with peacocks and cows.',
-            'gokul2.jpeg': 'Baby Krishna looking up at Yashoda ma in a beautiful Gokul photoshoot setting.',
-            'gokul3.jpeg': 'Toddler boy dressed as Krishna standing with a flute in a Gokul theme.',
-            'gokul4.jpeg': 'Baby boy with a large colorful turban as Krishna in a Gokul photoshoot.',
-            'gokul5.jpeg': 'Toddler Krishna with a mischievous smile in a vibrant Gokul setting.',
-            'gokul6.jpeg': 'A cute baby boy as Krishna with a peacock feather on his head in a Gokul theme.',
-            'gokul7.jpeg': 'Family photoshoot with baby Krishna and his parents in a Gokul theme.',
-            'gokul8.jpeg': 'Smiling baby Krishna posing with pots of butter in a Gokul photoshoot.',
-            'gokul9.jpeg': 'Baby boy as Krishna sitting on a small table for a photoshoot.',
-            'gokul10.jpeg': 'A beautiful family portrait with baby Krishna sleeping peacefully.',
-            'gokul11.jpeg': 'A joyful toddler boy as Krishna poses for his Janmashtami photoshoot.',
-            'gokul12.jpeg': 'Baby boy in Krishna outfit for a professional studio photoshoot in Delhi.',
-            'gokul13.jpeg': 'An adorable baby sitting playfully in a Gokul setting with a pot of butter.',
-            'jhulla1.jpeg': 'Little girl in a yellow Krishna dress smiling on a decorated jhula (swing).',
-            'jhulla2.jpeg': 'Happy baby boy in Krishna costume smiling on a white fur jhula.',
-            'jhulla3.jpeg': 'Toddler boy in Krishna outfit sitting on a jhula for a photoshoot.',
-            'jhulla4.jpeg': 'Baby boy with a crown as Krishna sitting with a butter pot on a jhula.',
-            'jhulla5.jpeg': 'Cute baby Krishna holding a butter pot on a decorated studio jhula.',
-            'jhulla6.jpeg': 'Toddler boy photoshoot in Delhi as Krishna on a beautiful swing.',
-            'jhulla7.jpeg': 'A mother and son portrait with the child as Krishna on a jhula.',
-            'kutiya1.jpeg': 'Baby boy photoshoot in a rustic hut (Kutiya) theme as Krishna.',
-            'kutiya2.jpeg': 'Toddler boy in Krishna costume holding a flute in a Kutiya theme.',
-            'kutiya3.jpeg': 'A waving baby boy dressed as Krishna in a straw hut studio setup.',
-            'kutiya4.jpeg': 'Little girl dressed as Radha for a Janmashtami photoshoot in a Kutiya theme.',
-            'vridanvan1.jpeg': 'Baby girl in Radha dress for a colorful Vrindavan theme photoshoot.',
-            'vridanvan2.jpeg':.jpeg': 'A happy baby girl as Radha with a butter pot in a Vrindavan setting.',
-            'vridanvan3.jpeg': 'Baby photoshoot for Janmashtami with a cute girl in Radha costume.',
-            'vridanvan4.jpeg': 'A baby in a green Radha dress holds a butter pot in a Vrindavan theme.',
-            'vridanvan5.jpeg': 'Baby photoshoot with a beautiful Vrindavan background and marigold flowers.',
-            'vridanvan6.jpeg': 'Close-up of a baby in a lovely dress for a Vrindavan theme photoshoot.'
-        };
-    
-        // MODIFIED: This function now accepts alt text
-        function createImageCard(src, theme, index, altText) {
-            return `
-                <div class="relative photo-frame">
-                    <div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">${theme.charAt(0).toUpperCase() + theme.slice(1)} Theme</div>
-                    <img src="images/${src}" alt="${altText}" class="rounded-lg shadow-xl w-full h-full object-cover">
-                </div>
-            `;
-        }
-    
-        function populateThemeContent(theme) {
-            const container = document.querySelector(`[data-content="${theme}"]`);
-            if (!container || container.innerHTML.trim() !== '') return; 
-    
-            const count = themeImageCounts[theme];
-            const prefix = themeToFilePrefix[theme];
-    
-            let content = '';
-            for (let i = 1; i <= count; i++) {
-                const filename = `${prefix}${i}.jpeg`;
-                // MODIFIED: Look up alt text from our mapping object. Provide a default if not found.
-                const altText = altTextMappings[filename] || `Janmashtami baby photoshoot in Delhi - ${theme} theme`;
-                content += createImageCard(filename, theme, i, altText);
+            const themeImageCounts = {
+                darbar: 5, aangan: 5, gokul: 13,
+                jhula: 7, kutiya: 4, vrindavan: 6
+            };
+        
+            const themeToFilePrefix = {
+                darbar: 'darbar', aangan: 'aangan', gokul: 'gokul',
+                jhula: 'jhulla', kutiya: 'kutiya', vrindavan: 'vridanvan'
+            };
+
+            const altTextMappings = {
+                'aangan1.jpeg': 'Baby girl in Radha dress with butter pot for Aangan theme photoshoot in Delhi.', 'aangan2.jpeg': 'Yashoda ma playing with baby Krishna during a family photoshoot.', 'aangan3.jpeg': 'Smiling baby girl dressed as Radha for Janmashtami Aangan theme photoshoot.', 'aangan4.jpeg': 'An adorable baby Krishna leaning on Yashoda ma in a tender moment.', 'aangan5.jpeg': 'Yashoda ma looking lovingly at baby Krishna for a themed photoshoot.', 'darbar1.jpeg': 'Happy baby girl in a colorful Radha dress for a Darbar theme photoshoot.', 'darbar2.jpeg': 'Cute baby boy dressed as little Krishna sitting on a small throne.', 'darbar3.jpeg': 'Baby boy as Krishna with a playful expression and butter on his face.', 'darbar4.jpeg': 'Innocent baby boy in Krishna costume for Janmashtami photoshoot.', 'darbar5.jpeg': 'Little girl smiling brightly in a Radha costume for a studio photoshoot.', 'gokul1.jpeg': 'Baby girl in Radha dress sitting in a Gokul theme with peacocks and cows.', 'gokul2.jpeg': 'Baby Krishna looking up at Yashoda ma in a beautiful Gokul photoshoot setting.', 'gokul3.jpeg': 'Toddler boy dressed as Krishna standing with a flute in a Gokul theme.', 'gokul4.jpeg': 'Baby boy with a large colorful turban as Krishna in a Gokul photoshoot.', 'gokul5.jpeg': 'Toddler Krishna with a mischievous smile in a vibrant Gokul setting.', 'gokul6.jpeg': 'A cute baby boy as Krishna with a peacock feather on his head in a Gokul theme.', 'gokul7.jpeg': 'Family photoshoot with baby Krishna and his parents in a Gokul theme.', 'gokul8.jpeg': 'Smiling baby Krishna posing with pots of butter in a Gokul photoshoot.', 'gokul9.jpeg': 'Baby boy as Krishna sitting on a small table for a photoshoot.', 'gokul10.jpeg': 'A beautiful family portrait with baby Krishna sleeping peacefully.', 'gokul11.jpeg': 'A joyful toddler boy as Krishna poses for his Janmashtami photoshoot.', 'gokul12.jpeg': 'Baby boy in Krishna outfit for a professional studio photoshoot in Delhi.', 'gokul13.jpeg': 'An adorable baby sitting playfully in a Gokul setting with a pot of butter.', 'jhulla1.jpeg': 'Little girl in a yellow Krishna dress smiling on a decorated jhula (swing).', 'jhulla2.jpeg': 'Happy baby boy in Krishna costume smiling on a white fur jhula.', 'jhulla3.jpeg': 'Toddler boy in Krishna outfit sitting on a jhula for a photoshoot.', 'jhulla4.jpeg': 'Baby boy with a crown as Krishna sitting with a butter pot on a jhula.', 'jhulla5.jpeg': 'Cute baby Krishna holding a butter pot on a decorated studio jhula.', 'jhulla6.jpeg': 'Toddler boy photoshoot in Delhi as Krishna on a beautiful swing.', 'jhulla7.jpeg': 'A mother and son portrait with the child as Krishna on a jhula.', 'kutiya1.jpeg': 'Baby boy photoshoot in a rustic hut (Kutiya) theme as Krishna.', 'kutiya2.jpeg': 'Toddler boy in Krishna costume holding a flute in a Kutiya theme.', 'kutiya3.jpeg': 'A waving baby boy dressed as Krishna in a straw hut studio setup.', 'kutiya4.jpeg': 'Little girl dressed as Radha for a Janmashtami photoshoot in a Kutiya theme.', 'vridanvan1.jpeg': 'Baby girl in Radha dress for a colorful Vrindavan theme photoshoot.', 'vridanvan2.jpeg': 'A happy baby girl as Radha with a butter pot in a Vrindavan setting.', 'vridanvan3.jpeg': 'Baby photoshoot for Janmashtami with a cute girl in Radha costume.', 'vridanvan4.jpeg': 'A baby in a green Radha dress holds a butter pot in a Vrindavan theme.', 'vridanvan5.jpeg': 'Baby photoshoot with a beautiful Vrindavan background and marigold flowers.', 'vridanvan6.jpeg': 'Close-up of a baby in a lovely dress for a Vrindavan theme photoshoot.'
+            };
+        
+            function createImageCard(src, theme, altText) {
+                return `
+                    <div class="relative photo-frame">
+                        <div class="absolute bottom-1 right-1 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">${theme.charAt(0).toUpperCase() + theme.slice(1)} Theme</div>
+                        <img src="images/${src}" alt="${altText}" class="rounded-lg shadow-xl w-full h-full object-cover">
+                    </div>
+                `;
             }
-    
-            container.innerHTML = content;
-    
-            // Reattach modal logic to new images
-            document.querySelectorAll('.photo-frame').forEach(frame => {
-                frame.addEventListener('click', () => {
-                    const img = frame.querySelector('img');
-                    const modalImg = document.getElementById('modalImage');
-                    modalImg.src = img.src;
-                    modalImg.alt = img.alt; // Update modal alt text
-                    document.getElementById('imageModal').classList.remove('hidden');
-                });
-            });
-        }
-    
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const selectedTab = button.getAttribute('data-tab');
-    
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-    
-                tabContents.forEach(content => {
-                    const tabName = content.getAttribute('data-content');
-                    if (tabName === selectedTab || selectedTab === 'all') {
-                        content.classList.remove('hidden');
-                        if (selectedTab !== 'all') populateThemeContent(tabName);
-                    } else {
-                        content.classList.add('hidden');
-                    }
+        
+            function populateThemeContent(theme) {
+                const container = document.querySelector(`[data-content="${theme}"]`);
+                if (!container || container.innerHTML.trim() !== '') return; // Don't re-populate
+        
+                const count = themeImageCounts[theme];
+                const prefix = themeToFilePrefix[theme];
+        
+                let content = '';
+                for (let i = 1; i <= count; i++) {
+                    const filename = `${prefix}${i}.jpeg`;
+                    const altText = altTextMappings[filename] || `Janmashtami baby photoshoot in Delhi - ${theme} theme`;
+                    content += createImageCard(filename, theme, altText);
+                }
+        
+                container.innerHTML = content;
+            }
+        
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedTab = button.getAttribute('data-tab');
+        
+                    // Update button active states
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+        
+                    // Update content visibility
+                    tabContents.forEach(content => {
+                        const contentName = content.getAttribute('data-content');
+                        
+                        // If the content's name matches the selected tab, show it
+                        if (contentName === selectedTab) {
+                            content.classList.remove('hidden');
+                            // If it's a specific theme (not 'all'), populate its images
+                            if (selectedTab !== 'all') {
+                                populateThemeContent(selectedTab);
+                            }
+                        } else {
+                            // Otherwise, hide it
+                            content.classList.add('hidden');
+                        }
+                    });
                 });
             });
         });
-        // --- END: MODIFIED SCRIPT ---
+        // --- END: CORRECTED SCRIPT ---
     </script>
-
-
-
 </body>
 </html>
